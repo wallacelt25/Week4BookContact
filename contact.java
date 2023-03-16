@@ -12,11 +12,7 @@ public class contact {
         this.email = email;
 
     }
-    /**
-     * @return the address
-     */
-
-    // getters and setters
+   
     public String getName() {
         return name;
     }
@@ -40,8 +36,7 @@ public class contact {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    //toString method is used to display the contents of an object inside it
+    
     public String toString() {
         return name + " " + phone + " " + email+" ";
     }
@@ -77,14 +72,14 @@ public class contact {
                 }
                 case "D": {
                     System.out.print("Enter Name :");
-                    final String delete = In.nextLine(); // consume the '\n' character left by previous nextInt() or next() method
+                    final String delete = In.nextLine(); 
                     boolean removed = LL.removeIf(contact -> contact.getName().equals(delete));
                     if (removed) {
                         System.out.println("** Contact Removed Successfully **");
                     } else {
                         System.out.println("** Contact Not Found **");
                     }
-                    continue; // go back to the beginning of the while loop
+                    continue; 
                 }
                 case "E": {
                     int cnt = 0;
